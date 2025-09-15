@@ -1,5 +1,4 @@
 import styles from "./Home.module.css";
-import theme from "../assets/theme.png"
 import maple from "../assets/maple.svg";
 
 function Home() {
@@ -19,7 +18,7 @@ function Home() {
                 </div>
             </div>
             <div className={styles["theme"]}>
-                <img src={theme} />
+                <img src="https://z.wiki/u/otxhGS" />
                 <div className={styles["motto"]}>
                     <div className={styles["cover"]}/>
                     <div className={styles["content"]}>
