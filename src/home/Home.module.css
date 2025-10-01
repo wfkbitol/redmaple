@@ -14,11 +14,11 @@
     }
 
     .slogan {
-        font-size: 1.5rem;
+        font-size: clamp(1rem, 2vw, 1.5rem);
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
         animation: fadeInUp 1s ease 0.5s both;
         padding: 10px 20px;
-        max-width: 50%;
+        max-width: 80%;
         background: rgba(0, 0, 0, 0.3);
         border-radius: 8px;
         backdrop-filter: blur(5px);
@@ -37,13 +37,15 @@
     }
 
     .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+        grid-gap: 16px;
+        justify-content: stretch;
+        margin-top: 72px;
+        align-self: center;
+        max-width: 80%;
 
         button {
-            list-style: none;
             background-color: rgba(255, 255, 255, 0.2);
             border-radius: 50px;
             padding: 10px 20px;
@@ -56,19 +58,16 @@
             justify-content: center;
             align-items: center;
             transition: transform 0.3s ease, backbround-color 0.3s ease;
-            margin-left: 16px;
             cursor: pointer;
             outline: none;
             color: #fff;
         }
 
-        button:first-child {
-            margin-left: 0;
-        }
-
-        button:hover {
-            transform: translateY(-5px);
-            background-color: rgba(255, 255, 255, 0.3);
+        @media (hover: hover) and (pointer: fine) {
+            button:hover {
+                transform: translateY(-5px);
+                background-color: rgba(255, 255, 255, 0.3);
+            }
         }
     }
 

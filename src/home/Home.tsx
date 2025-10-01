@@ -14,10 +14,10 @@ function Home() {
 
 
             <nav className={styles["nav"]}>
-                <button>C#</button>
-                <button>WPF</button>
-                <button>JS</button>
-                <button>杂七杂八</button>
+                <button type="button">C#</button>
+                <button type="button">WPF</button>
+                <button type="button">JS</button>
+                <button type="button">杂七杂八</button>
             </nav>
 
             <div className={styles["scroll-indicator-container"]}>
