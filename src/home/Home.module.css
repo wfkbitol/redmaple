@@ -109,3 +109,101 @@
         transform: translateY(-10px);
     }
 }
+
+.categories {
+    margin-top: 128px;
+
+    .categories-title {
+        width: fit-content;
+        margin: 0 auto;
+        font-size: 3rem;
+        ;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .categories-title::after {
+        content: '';
+        width: 128px;
+        height: 4px;
+        background-color: var(--primary-color);
+        display: block;
+        margin: 8px auto 0 auto;
+        border-radius: 2px;
+    }
+
+    .categories-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap: 24px;
+        padding: 0 16px;
+        max-width: 80%;
+        margin: 48px auto 0 auto;
+        justify-content: center;
+        align-items: stretch;
+
+        .category-item {
+            background-color: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            color: var(--text-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            .category-header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 16px;
+
+                .category-icon {
+                    width: 48px;
+                    height: 48px;
+                    background-color: var(--primary-color);
+                    border-radius: 8px;
+                }
+
+                .category-title {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: var(--primary-color);
+                    text-align: left;
+                }
+            }
+
+
+
+            .category-description {
+                margin-top: 24px;
+                line-height: 1.5em;
+                color: var(--text-color);
+            }
+
+            .category-more {
+                margin-top: 36px;
+                background-color: var(--primary-color);
+                color: #fff;
+                padding: 8px 16px;
+                border-radius: 999px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                user-select: none;
+                font-size: 1.1rem;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                .category-more:hover {
+                    background-color: var(--secondary-color);
+                }
+            }
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .category-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 12px var(--shadow-color);
+            }
+        }
+    }
+}
