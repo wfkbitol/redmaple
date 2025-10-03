@@ -146,13 +146,12 @@
                     flex-direction: row;
                     align-items: center;
                     justify-content: flex-start;
-                    gap: 16px;
+                    gap: 24px;
 
                     .category-icon {
-                        width: 48px;
-                        height: 48px;
-                        background-color: var(--primary-color);
-                        border-radius: 8px;
+                        width: 36px;
+                        height: 36px;
+                        fill: var(--primary-color);
                     }
 
                     .category-title {
