@@ -1,6 +1,7 @@
 import styles from "./Home.module.css";
 import icons from "../assets/icons.svg";
 import { useRef } from "react";
+import avatar from "../assets/avatar.jpeg";
 
 function Home() {
     const categories = useRef<HTMLDivElement>(null);
@@ -8,13 +9,10 @@ function Home() {
     const category2 = useRef<HTMLDivElement>(null);
     const category3 = useRef<HTMLDivElement>(null);
     const category4 = useRef<HTMLDivElement>(null);
+    const about = useRef<HTMLDivElement>(null);
 
-    function handleScrollIndicatorClick() {
-        categories.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    function handleNavClick(target: HTMLDivElement | null) {
-        target?.scrollIntoView({ behavior: "smooth", block: "center" });
+    function scroll(target: HTMLDivElement | null, block:ScrollLogicalPosition) {
+        target?.scrollIntoView({ behavior: "smooth", block });
     }
 
     return (
@@ -29,14 +27,14 @@ function Home() {
                 </div>
 
                 <nav className={styles["nav"]}>
-                    <button type="button" onClick={() => handleNavClick(category1.current)}>文章</button>
-                    <button type="button" onClick={() => handleNavClick(category2.current)}>笔记</button>
-                    <button type="button" onClick={() => handleNavClick(category3.current)}>画廊</button>
-                    <button type="button" onClick={() => handleNavClick(category4.current)}>杂七杂八</button>
+                    <button type="button" onClick={() => scroll(category1.current,"center")}>文章</button>
+                    <button type="button" onClick={() => scroll(category2.current, "center")}>笔记</button>
+                    <button type="button" onClick={() => scroll(category3.current, "center")}>画廊</button>
+                    <button type="button" onClick={() => scroll(category4.current, "center")}>杂七杂八</button>
                 </nav>
 
                 <div className={styles["scroll-indicator-container"]}>
-                    <button className={styles["scroll-indicator"]} type="button" onClick={handleScrollIndicatorClick}>
+                    <button className={styles["scroll-indicator"]} type="button" onClick={()=>scroll(categories.current, "start")}>
                         <svg viewBox="0 0 640 640">
                             <use href={`${icons}#arrow-down`} />
                         </svg>
@@ -87,6 +85,29 @@ function Home() {
                         <div className={styles["category-description"]}>这是一个自由的角落。存放所有无法被简单定义的内容，或许是一次尝试、一个发现，或只是一份简单的随感。</div>
                         <button className={styles["category-more"]}>查看更多</button>
                     </div>
+                </div>
+                <div className={styles["scroll-indicator-container"]}>
+                    <button className={styles["scroll-indicator"]} type="button" onClick={() => scroll(about.current, "start")}>
+                        <svg viewBox="0 0 640 640">
+                            <use href={`${icons}#arrow-down`} />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <section className={styles["about-me"]} ref={about}>
+                <img className={styles["about-avatar"]} src={avatar} alt="avatar" />
+                <div className={styles["about-name"]}>BLUEROCKS</div>
+
+                <div className={styles["about-desc"]} >
+                    一个普通的程序员，各种东西都研究点儿，但都没研究出啥结果来。<br/>建个小站，记录点儿东西。
+                </div>
+
+                <div className={styles["about-tech"]}>
+                    <div className={styles["about-tech-item"]}>C#</div>
+                    <div className={styles["about-tech-item"]}>WPF</div>
+                    <div className={styles["about-tech-item"]}>Javascript</div>
+                    <div className={styles["about-tech-item"]}>React</div>
                 </div>
             </section>
         </div>

@@ -95,7 +95,8 @@
                 outline: none;
                 background: none;
                 border: none;
-                svg{
+
+                svg {
                     fill: #fff;
                 }
             }
@@ -104,8 +105,13 @@
 
     .categories {
         min-height: 100vh;
-        padding: 128px 0 64px 0;
+        padding-top: 128px;
         scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
         .categories-title {
             width: fit-content;
             margin: 0 auto;
@@ -194,6 +200,104 @@
                 .category-item:hover {
                     transform: translateY(-5px);
                     box-shadow: 0 4px 12px var(--shadow-color);
+                }
+            }
+        }
+
+        .scroll-indicator-container {
+            margin-top: auto;
+            height: 100px;
+            background: linear-gradient(180deg, transparent, var(--bg-color));
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .scroll-indicator {
+                width: 48px;
+                height: 48px;
+                animation: scroll-indicator-animation 2s infinite;
+                cursor: pointer;
+                outline: none;
+                background: none;
+                border: none;
+
+                svg {
+                    fill: var(--text-color);
+                }
+            }
+        }
+    }
+
+    .about-me {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        .about-avatar {
+            margin-top: 8%;
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            transition: box-shadow 0.3s ease;
+            object-fit: cover;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .about-avatar:hover {
+                box-shadow: 0 4px 12px var(--shadow-color);
+            }
+        }
+
+        .about-name {
+            margin-top: 32px;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .about-desc {
+            margin-top: 32px;
+            width: 80%;
+            text-align: center;
+            line-height: 1.5em;
+            color: var(--text-color);
+            padding: 0 16px;
+        }
+
+        .about-tech {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+            justify-content: center;
+            grid-gap: 16px;
+            width: 80%;
+            margin-top: 64px;
+
+            .about-tech-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                background-color: var(--primary-color);
+                height: 48px;
+                border-radius: 8px;
+                cursor: default;
+            }
+
+            @media (hover: hover) and (pointer: fine) {
+                .about-tech-item:hover {
+                    background-color: var(--secondary-color);
                 }
             }
         }
