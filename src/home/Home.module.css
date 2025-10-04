@@ -12,10 +12,10 @@
         justify-content: flex-start;
         align-items: center;
         scroll-snap-align: start;
+        padding-top: 8%;
 
         .title {
             font-size: 4rem;
-            margin-top: 10%;
             color: #fff;
         }
 
@@ -44,12 +44,13 @@
 
         .nav {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             grid-gap: 16px;
-            justify-content: stretch;
+            justify-items: stretch;
+            align-items: center;
             margin-top: 72px;
             align-self: center;
-            max-width: 80%;
+            width: 60%;
 
             button {
                 background-color: rgba(255, 255, 255, 0.2);
@@ -74,6 +75,12 @@
                     transform: translateY(-5px);
                     background-color: rgba(255, 255, 255, 0.3);
                 }
+            }
+        }
+
+        @media (max-width: 316px) {
+            .nav {
+                width: 80%;
             }
         }
 
@@ -105,7 +112,7 @@
 
     .categories {
         min-height: 100vh;
-        padding-top: 128px;
+        padding-top: 8%;
         scroll-snap-align: start;
         display: flex;
         flex-direction: column;
@@ -237,9 +244,9 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        padding-top: 8%;
 
         .about-avatar {
-            margin-top: 8%;
             width: 128px;
             height: 128px;
             border-radius: 50%;
@@ -261,7 +268,7 @@
 
         .about-name {
             margin-top: 32px;
-            font-size: 3rem;
+            font-size: clamp(2rem, 3vw, 2.5rem);
             font-weight: bold;
             color: var(--primary-color);
         }
@@ -277,10 +284,12 @@
 
         .about-tech {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 150px));
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             justify-content: center;
+            justify-items: stretch;
+            align-items: center;
             grid-gap: 16px;
-            width: 80%;
+            width: 60%;
             margin-top: 64px;
 
             .about-tech-item {
@@ -301,6 +310,13 @@
                 }
             }
         }
+
+        @media (max-width: 316px) {
+            .about-tech {
+                width: 80%;
+            }
+        }
+
     }
 }
 

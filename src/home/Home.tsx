@@ -100,7 +100,7 @@ function Home() {
                 <div className={styles["about-name"]}>BLUEROCKS</div>
 
                 <div className={styles["about-desc"]} >
-                    一个普通的程序员，各种东西都研究点儿，但都没研究出啥结果来。<br/>建个小站，记录点儿东西。
+                    一介码农，浪迹江湖。诸般技艺，皆有涉猎，然皆浅尝辄止，未得真传。然，心游万仞，乐在其中矣。
                 </div>
 
                 <div className={styles["about-tech"]}>
