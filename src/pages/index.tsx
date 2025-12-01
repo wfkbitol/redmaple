@@ -69,7 +69,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <div className={styles["categoryItem"]} ref={category3}>
                         <div className={styles["categoryHeader"]}>
                             <svg viewBox="0 0 640 640" className={styles["categoryIcon"]}>
-                                <use href="/icons.svg##example" />
+                                <use href="/icons.svg#example" />
                             </svg>
                             <div className={styles["categoryTitle"]}>画廊</div>
                         </div>
@@ -79,7 +79,7 @@ const IndexPage: React.FC<PageProps> = () => {
                     <div className={styles["categoryItem"]} ref={category4}>
                         <div className={styles["categoryHeader"]}>
                             <svg viewBox="0 0 640 640" className={styles["categoryIcon"]}>
-                                <use href="/icons.svg##misc" />
+                                <use href="/icons.svg#misc" />
                             </svg>
                             <div className={styles["categoryTitle"]}>杂七杂八</div>
                         </div>
