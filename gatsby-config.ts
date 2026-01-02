@@ -14,7 +14,7 @@ const config: GatsbyConfig = {
     {
       resolve:"gatsby-plugin-manifest",
       options:{
-        icon:"/favicon.svg"
+        icon:"src/assets/favicon.svg"
       }
     }
   ],
