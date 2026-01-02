@@ -4,12 +4,21 @@ import * as styles from "./index.module.scss"
 
 const IndexPage: React.FC<PageProps> = () => {
 
-    const [theme, setTheme] = React.useState(localStorage.getItem("theme") || "light");
-    const [lang, setLang] = React.useState(localStorage.getItem("lang") || navigator.language.startsWith("zh") ? "zh-cn" : "en-us");
+    const [theme, setTheme] = React.useState<"light"|"dark">("light");
+    const [lang, setLang] = React.useState<"en-us"|"zh-cn">("en-us");
     const articleRef = React.useRef<HTMLDivElement | null>(null);
     const noteRef = React.useRef<HTMLDivElement | null>(null);
     const exampleRef = React.useRef<HTMLDivElement | null>(null);
     const miscRef = React.useRef<HTMLDivElement | null>(null);
+
+    React.useEffect(()=>{
+        if (typeof window !== "undefined") {
+            const theme = window.localStorage.getItem("theme") || "light";
+            const lang = window.localStorage.getItem("lang") || window.navigator.language.toLowerCase().startsWith("zh") ? "zh-cn" : "en-us";
+            setTheme(theme as "light" | "dark");
+            setLang(lang as "en-us" | "zh-cn");
+        };
+    },[]);
 
 
     React.useEffect(() => {
@@ -19,12 +28,16 @@ const IndexPage: React.FC<PageProps> = () => {
 
     function toggleTheme() {
         setTheme(theme => theme === "light" ? "dark" : "light");
-        localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+        if(typeof window !== "undefined"){
+            window?.localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+        }
     }
 
     function toggleLang() {
         setLang(lang => lang === "en-us" ? "zh-cn" : "en-us");
-        localStorage.setItem("lang", lang === "en-us" ? "zh-cn" : "en-us");
+        if(typeof window !== "undefined"){
+            window?.localStorage.setItem("lang", lang === "en-us" ? "zh-cn" : "en-us");
+        }
     }
 
     function scroll(element: HTMLDivElement | null, block: ScrollLogicalPosition){
