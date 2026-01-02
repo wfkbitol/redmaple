@@ -4,7 +4,7 @@
     height: 100vh;
 
     .main {
-        background-image: url('/main_light.png');
+        background-image: url('https://youke3.picui.cn/s1/2026/01/02/695779759f673.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: center;
@@ -15,7 +15,7 @@
         flex-direction: column;
 
         [data-theme='dark'] & {
-            background-image: url('/main_dark.png');
+            background-image: url('https://youke3.picui.cn/s1/2026/01/02/695779753dbb0.png');
         }
 
         .header {
