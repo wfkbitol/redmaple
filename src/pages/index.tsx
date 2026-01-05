@@ -2,22 +2,24 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import * as styles from "./index.module.scss";
 import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
 
 const IndexPage: React.FC<PageProps> = () => {
 
     const [theme, setTheme] = React.useState<"light" | "dark">("light");
-    const [lang, setLang] = React.useState<"en-us" | "zh-cn">("en-us");
+
     const articleRef = React.useRef<HTMLDivElement | null>(null);
     const noteRef = React.useRef<HTMLDivElement | null>(null);
     const exampleRef = React.useRef<HTMLDivElement | null>(null);
     const miscRef = React.useRef<HTMLDivElement | null>(null);
+
+    const { t, i18n } = useTranslation();
 
     React.useEffect(() => {
         if (typeof window !== "undefined") {
             const theme = window.localStorage.getItem("theme") || "light";
             const lang = window.localStorage.getItem("lang") || window.navigator.language.toLowerCase().startsWith("zh") ? "zh-cn" : "en-us";
             setTheme(theme as "light" | "dark");
-            setLang(lang as "en-us" | "zh-cn");
         };
     }, []);
 
@@ -35,10 +37,7 @@ const IndexPage: React.FC<PageProps> = () => {
     }
 
     function toggleLang() {
-        setLang(lang => lang === "en-us" ? "zh-cn" : "en-us");
-        if (typeof window !== "undefined") {
-            window?.localStorage.setItem("lang", lang === "en-us" ? "zh-cn" : "en-us");
-        }
+        i18n.changeLanguage(i18n.language === "zh-CN" ? "en-US" : "zh-CN");
     }
 
     function scroll(element: HTMLDivElement | null, block: ScrollLogicalPosition) {
@@ -79,25 +78,25 @@ const IndexPage: React.FC<PageProps> = () => {
                                 <svg viewBox="0 0 512 512">
                                     <use href="/icons.svg#article" />
                                 </svg>
-                                文章
+                                {t("home_menu_blog")}
                             </button>
                             <button onClick={scrollToNote}>
                                 <svg viewBox="0 0 512 512">
                                     <use href="/icons.svg#note" />
                                 </svg>
-                                笔记
+                                {t("home_menu_note")}
                             </button>
                             <button onClick={scrollToExample}>
                                 <svg viewBox="0 0 512 512">
                                     <use href="/icons.svg#example" />
                                 </svg>
-                                画廊
+                                {t("home_menu_gallery")}
                             </button>
                             <button onClick={scrollToMisc}>
                                 <svg viewBox="0 0 512 512">
                                     <use href="/icons.svg#misc" />
                                 </svg>
-                                其他
+                                {t("home_menu_misc")}
                             </button>
                         </nav>
                     </div>
@@ -113,7 +112,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <svg viewBox="0 0 640 640">
                             <use href="/icons.svg#article" />
                         </svg>
-                        <div>文档</div>
+                        <div>{t("home_menu_blog")}</div>
                     </header>
                     <button className={styles["scrollIndicator"]} type="button" onClick={scrollToNote}>
                         <svg viewBox="0 0 640 640">
@@ -126,7 +125,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <svg viewBox="0 0 640 640">
                             <use href="/icons.svg#note" />
                         </svg>
-                        <div>笔记</div>
+                        <div>{t("home_menu_note")}</div>
                     </header>
                     <button className={styles["scrollIndicator"]} type="button" onClick={scrollToExample}>
                         <svg viewBox="0 0 640 640">
@@ -139,7 +138,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <svg viewBox="0 0 640 640">
                             <use href="/icons.svg#example" />
                         </svg>
-                        <div>画廊</div>
+                        <div>{t("home_menu_gallery")}</div>
                     </header>
                     <button className={styles["scrollIndicator"]} type="button" onClick={scrollToMisc}>
                         <svg viewBox="0 0 640 640">
@@ -152,7 +151,7 @@ const IndexPage: React.FC<PageProps> = () => {
                         <svg viewBox="0 0 640 640">
                             <use href="/icons.svg#misc" />
                         </svg>
-                        <div>其他</div>
+                        <div>{t("home_menu_misc")}</div>
                     </header>
                 </section>
             </div>
@@ -162,7 +161,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </svg>
             </button>
             <button type="button" className={styles["btnLang"]} onClick={toggleLang}>
-                {lang === "zh-cn" ? "中" : "EN"}
+                {i18n.language === "zh-CN" ? "中" : "EN"}
             </button>
         </>
     )
