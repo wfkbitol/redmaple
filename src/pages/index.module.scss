@@ -1,6 +1,6 @@
 .container {
     scroll-snap-type: y mandatory;
-    overflow: scroll;
+    overflow: auto;
     height: 100vh;
 
     .main {
