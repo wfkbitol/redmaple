@@ -1,0 +1,72 @@
+{
+  "htmlLang": "zh-CN",
+  "siteTitle": "Red Maple Journal",
+  "siteDescription": "一个以红色枫树为主题的个人博客与前端画廊站点。",
+  "localeLabels": { "zh": "中", "en": "EN" },
+  "switchLocaleLabel": "语言",
+  "themeButton": { "dark": "亮色", "light": "暗色" },
+  "navItems": [
+    { "href": "/", "label": "主页" },
+    { "href": "/blog", "label": "博客" },
+    { "href": "/gallery", "label": "画廊" },
+    { "href": "/notes", "label": "随笔" },
+    { "href": "/musings", "label": "胡思乱想" }
+  ],
+  "home": {
+    "tagline": "一棵会发光的红枫，盛着我的博客、画廊与夜晚的想法。",
+    "description": "这里是一个以红色枫树为主题的个人站点，既有沉稳的博客文章，也有炫酷的前端效果展示，还有一些随手写下的碎碎念。",
+    "buttons": { "blog": "浏览博客", "gallery": "看看画廊" }
+  },
+  "sectionCards": [
+    {
+      "title": "博客",
+      "description": "长篇文章与对设计与前端实践的沉淀。",
+      "href": "/blog",
+      "accent": "从火焰到落叶"
+    },
+    {
+      "title": "画廊",
+      "description": "一组用来发光的前端效果与互动展示。",
+      "href": "/gallery",
+      "accent": "炫酷的光晕与动画"
+    },
+    {
+      "title": "随笔",
+      "description": "整理一些简短但实用的技术点与经验。",
+      "href": "/notes",
+      "accent": "零散却有用的知识"
+    },
+    {
+      "title": "胡思乱想",
+      "description": "记录偶尔冒出来的念头与心绪。",
+      "href": "/musings",
+      "accent": "情绪与思考的片段"
+    }
+  ],
+  "blogPage": {
+    "title": "长篇博客与沉思",
+    "description": "在这里留下更完整的思考、观点与对前端与生活的观察。"
+  },
+  "notesPage": {
+    "title": "随笔与技术小记",
+    "description": "简短、实用、随时能翻出来的点子和经验。"
+  },
+  "musingsPage": {
+    "title": "胡思乱想与夜里的碎片",
+    "description": "把那些偶尔闪过的念头留在这儿，不必过于严肃。"
+  },
+  "galleryPage": {
+    "title": "一组用来发光的前端效果",
+    "description": "这里的交互与光效更像一片微风中的火焰。"
+  },
+  "galleryScene": {
+    "label": "Interactive Demo",
+    "title": "红枫光晕",
+    "description": "这个画廊场景把鼠标移动和光效联动起来，让它看起来更像被风吹动的火焰。"
+  },
+  "article": {
+    "backHome": "← 返回主页",
+    "sectionLabels": { "blog": "博客", "notes": "随笔", "musings": "胡思乱想" }
+  },
+  "contentList": { "searchPlaceholder": "搜索文章、标签或关键词", "allLabel": "全部" }
+}

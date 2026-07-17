@@ -1,0 +1,72 @@
+{
+  "htmlLang": "en",
+  "siteTitle": "Red Maple Journal",
+  "siteDescription": "A personal site built around a glowing red maple tree, with blog posts, a gallery and quiet thoughts.",
+  "localeLabels": { "zh": "中", "en": "EN" },
+  "switchLocaleLabel": "Language",
+  "themeButton": { "dark": "Light", "light": "Dark" },
+  "navItems": [
+    { "href": "/", "label": "Home" },
+    { "href": "/blog", "label": "Blog" },
+    { "href": "/gallery", "label": "Gallery" },
+    { "href": "/notes", "label": "Notes" },
+    { "href": "/musings", "label": "Musings" }
+  ],
+  "home": {
+    "tagline": "A glowing red maple holds my blog, gallery and nighttime ideas.",
+    "description": "A personal site centered on a red maple motif with calm blog writing, cool frontend demos and scattered thoughts.",
+    "buttons": { "blog": "Browse Blog", "gallery": "View Gallery" }
+  },
+  "sectionCards": [
+    {
+      "title": "Blog",
+      "description": "Long-form writing and reflections on design and frontend craft.",
+      "href": "/blog",
+      "accent": "From flame to leaf"
+    },
+    {
+      "title": "Gallery",
+      "description": "A set of glowing frontend effects and interactive demos.",
+      "href": "/gallery",
+      "accent": "Cool glows and motion"
+    },
+    {
+      "title": "Notes",
+      "description": "Short notes and practical technical takeaways.",
+      "href": "/notes",
+      "accent": "Small but useful ideas"
+    },
+    {
+      "title": "Musings",
+      "description": "Occasional thoughts and emotional fragments.",
+      "href": "/musings",
+      "accent": "Fragments of feeling"
+    }
+  ],
+  "blogPage": {
+    "title": "Long-form blogs and reflections",
+    "description": "A place for longer thinking on frontend and design."
+  },
+  "notesPage": {
+    "title": "Notes and technical snippets",
+    "description": "Short, practical ideas you can return to anytime."
+  },
+  "musingsPage": {
+    "title": "Musings and late-night fragments",
+    "description": "Sporadic thoughts left here without too much pressure."
+  },
+  "galleryPage": {
+    "title": "A set of glowing frontend effects",
+    "description": "This gallery scene links motion with light to feel like wind-blown fire."
+  },
+  "galleryScene": {
+    "label": "Interactive Demo",
+    "title": "Red Maple Glow",
+    "description": "This gallery scene links mouse movement with light so it feels more like fire blown by the wind."
+  },
+  "article": {
+    "backHome": "← Back Home",
+    "sectionLabels": { "blog": "Blog", "notes": "Notes", "musings": "Musings" }
+  },
+  "contentList": { "searchPlaceholder": "Search posts, tags, or keywords", "allLabel": "All" }
+}
