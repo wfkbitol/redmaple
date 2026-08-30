@@ -1,45 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { getTranslation } from "@/lib/i18n";
 import "./globals.css";
+import Header from "./components/Header/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const defaultTranslation = getTranslation();
 
 export const metadata: Metadata = {
-  title: defaultTranslation.siteTitle,
-  description: defaultTranslation.siteDescription,
+  title: "RED MAPLE",
+  description: "BlueRocks' sweet home",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+
   return (
-    <html
-      lang={defaultTranslation.htmlLang}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(()=>{try{var t=localStorage.getItem("redmaple-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}})()`,
-          }}
-        />
-      </head>
-      <body className="min-h-full flex flex-col">
-        {children}
+    <html lang="en" className="h-full antialiased">
+      <body className="bg-background text-foreground">
+        <Header/>
+        <main className="flex-1">{children}</main>
       </body>
     </html>
   );

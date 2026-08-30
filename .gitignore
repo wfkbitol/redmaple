@@ -10,15 +10,6 @@
 !.yarn/releases
 !.yarn/versions
 
-# agent
-/.workbuddy
-AGENTS.md
-CLAUDE.md
-
-# ide
-/.devcontainer
-/.vscode
-
 # testing
 /coverage
 
