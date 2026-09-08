@@ -1,0 +1,10 @@
+{
+    "app":{
+        "title":"RED MAPLE"
+    },
+    "home":{
+        "navs":{
+            "blog":"Blog"
+        }
+    }
+}
