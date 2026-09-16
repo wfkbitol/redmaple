@@ -1,10 +1,14 @@
 {
-    "app":{
-        "title":"红枫树"
+    "app": {
+        "title": "红枫树",
+        "description": "BlueRocks 的温馨小窝"
     },
-    "home":{
-        "navs":{
-            "blog":"博客"
-        }
+    "header": {
+        "title": "红枫树",
+        "home": "主页",
+        "blog": "博客",
+        "gallery": "画廊",
+        "notes": "笔记",
+        "musing": "胡思乱想"
     }
 }

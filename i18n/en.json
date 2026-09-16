@@ -1,10 +1,14 @@
 {
     "app":{
-        "title":"RED MAPLE"
+        "title":"RED MAPLE",
+        "description":"BlueRocks' sweet home"
     },
-    "home":{
-        "navs":{
-            "blog":"Blog"
-        }
+    "header":{
+        "title":"RED MAPLE",
+        "home":"Home",
+        "blog":"Blog",
+        "gallery":"Gallery",
+        "notes":"Notes",
+        "musing":"Musing"
     }
 }
