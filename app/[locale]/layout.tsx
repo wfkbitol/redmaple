@@ -5,6 +5,7 @@ import "../globals.css";
 import Header from "../components/Header/Header";
 import { routing } from "../../i18n/routing";
 import { getLocale, getTranslations } from "next-intl/server";
+import { ThemeProvider } from "next-themes";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("app");
@@ -24,23 +25,14 @@ export default async function RootLayout({ children }: LayoutProps<"/[locale]">)
 
   return (
     <html lang={locale} className="h-full antialiased" suppressHydrationWarning>
-      <head>
-        <Script id="theme-initializer" strategy="beforeInteractive">
-          {`
-            (() => {
-              const theme = localStorage.getItem("theme");
-              if (theme === "light" || theme === "dark") {
-                document.documentElement.setAttribute("data-theme", theme);
-              }
-            })();
-          `}
-        </Script>
-      </head>
+      <head/>
       <body className="bg-background text-foreground">
-        <NextIntlClientProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-        </NextIntlClientProvider>
+        <ThemeProvider>
+          <NextIntlClientProvider>
+            <Header />
+            <main className="flex-1">{children}</main>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

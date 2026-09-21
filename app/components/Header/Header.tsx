@@ -5,9 +5,11 @@ import { useDismiss, useFloating, useInteractions } from "@floating-ui/react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "../../../i18n/navigation";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 function Header() {
     const [state, dispatch] = useReducer(reducer, init);
+    const {theme, setTheme} = useTheme();
     const locale = useLocale();
     const pathname = usePathname();
     const router = useRouter();
@@ -35,15 +37,11 @@ function Header() {
     }
 
     function handleChangeThemeClick() {
-        let theme = document.documentElement.getAttribute("data-theme") ?? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-        if (theme === "light") {
-            theme = "dark";
-        } else if (theme === "dark") {
-            theme = "light";
+        if(theme === "light"){
+            setTheme("dark");
+        }else if(theme === "dark"){
+            setTheme("light");
         }
-
-        document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
     }
 
     return (
