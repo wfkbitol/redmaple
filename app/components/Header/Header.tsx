@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 
 function Header() {
     const [state, dispatch] = useReducer(reducer, init);
-    const {theme, setTheme} = useTheme();
+    const { theme, resolvedTheme, setTheme } = useTheme();
     const locale = useLocale();
     const pathname = usePathname();
     const router = useRouter();
@@ -37,9 +37,11 @@ function Header() {
     }
 
     function handleChangeThemeClick() {
-        if(theme === "light"){
+        if(theme === resolvedTheme){
+            setTheme("system");
+        }else if(resolvedTheme === "light"){
             setTheme("dark");
-        }else if(theme === "dark"){
+        }else if(resolvedTheme === "dark"){
             setTheme("light");
         }
     }
@@ -63,8 +65,11 @@ function Header() {
                     </div>
                     <div className="col-start-3 row-start-1 flex flex-row items-center justify-end gap-4 pr-8">
                         <button className="h-8 w-8 border border-border rounded-full text-muted-foreground flex flex-row justify-center items-center cursor-pointer hover:bg-background hover:text-foreground transition-colors" onClick={handleChangeThemeClick}>
-                            <svg viewBox="0 0 32 32" className="w-5 h-5">
+                            <svg viewBox="0 0 32 32" className="w-5 h-5 dark:hidden">
                                 <use href="/icons.svg#moon" fill="currentColor" />
+                            </svg>
+                            <svg viewBox="0 0 32 32" className="w-5 h-5 hidden dark:block">
+                                <use href="/icons.svg#sun" fill="currentColor" />
                             </svg>
                         </button>
                         <button className="h-8 w-8 border border-border rounded-full text-muted-foreground flex flex-row justify-center items-center cursor-pointer hover:bg-background hover:text-foreground transition-colors" onClick={handleChangeLocaleClick}>
@@ -72,7 +77,7 @@ function Header() {
                         </button>
                         <button onClick={handleMenuToggleClick} className="h-8 w-8 border border-border rounded-full text-muted-foreground flex flex-row justify-center items-center cursor-pointer hover:bg-background hover:text-foreground transition-colors min-[800px]:hidden">
                             <svg viewBox="0 0 32 32" className="w-5 h-5">
-                                <use href="/icons.svg#menu" fill="currentColor" />
+                                { }
                             </svg>
                         </button>
                     </div>

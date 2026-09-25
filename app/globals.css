@@ -1,7 +1,7 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-:root,
-:root[data-theme="light"] {
+:root {
   --background: #fffaf2;
   --foreground: #2c1714;
   --primary: #b9382f;
@@ -45,21 +45,4 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-success: var(--success);
   --color-border: var(--border);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    --background: #211311;
-    --foreground: #fff4e8;
-    --primary: #e0644e;
-    --primary-foreground: #211311;
-    --secondary: #4a2923;
-    --secondary-foreground: #f6d9c8;
-    --muted: #34221f;
-    --muted-foreground: #c9a69a;
-    --accent: #e6a64a;
-    --accent-foreground: #211311;
-    --success: #91a77c;
-    --border: #5b3931;
-  }
 }
