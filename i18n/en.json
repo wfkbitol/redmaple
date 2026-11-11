@@ -10,5 +10,15 @@
         "gallery":"Gallery",
         "notes":"Notes",
         "musing":"Musing"
+    },
+    "home":{
+        "eyebrow":"Finding life in the everyday",
+        "title":"Slow down. Hear time echo.",
+        "description":"Put passing thoughts into words and keep the scenes we happen upon. Life may not always offer answers, but each moment of attention brings us closer to the present.",
+        "motto":"The world is vast; this moment is where we begin.",
+        "attribution":"For all of us still finding our way",
+        "navigation":"Explore Red Maple",
+        "blog":"Blog",
+        "gallery":"Gallery"
     }
 }

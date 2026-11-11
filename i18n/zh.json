@@ -10,5 +10,15 @@
         "gallery": "画廊",
         "notes": "笔记",
         "musing": "胡思乱想"
+    },
+    "home": {
+        "eyebrow": "在日常之中，照见生活",
+        "title": "慢下来，听见时间的回声。",
+        "description": "把流转的念头写下来，把偶然遇见的风景收藏起来。生活未必总有答案，但每一次凝望，都让我们更接近此刻。",
+        "motto": "世界辽阔，而此刻就是起点。",
+        "attribution": "写给仍在路上的我们",
+        "navigation": "探索红枫树",
+        "blog": "Blog",
+        "gallery": "Gallery"
     }
 }
