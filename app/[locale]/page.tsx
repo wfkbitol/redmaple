@@ -5,7 +5,7 @@ export default async function HomePage() {
   const t = await getTranslations("home");
 
   return (
-    <section aria-labelledby="home-title" className="flex min-h-[calc(100svh-4rem)] items-center bg-gradient-to-br from-background via-secondary/40 to-background px-6 py-10 sm:px-10 sm:py-12">
+    <section aria-labelledby="home-title" className="flex min-h-[calc(100svh-4rem)] items-center bg-linear-to-br from-background via-secondary/40 to-background px-6 py-10 sm:px-10 sm:py-12">
       <div className="mx-auto w-full max-w-6xl">
         <p className="mb-5 flex items-center gap-3 text-xs font-semibold tracking-[0.3em] text-primary sm:mb-7 sm:text-sm">
           <span className="h-px w-8 bg-primary" />

@@ -62,7 +62,8 @@ function Header() {
                         <h1 className="text-lg font-bold text-primary">{t("title")}</h1>
                     </div>
                     <div className="col-start-1 col-span-3 row-start-1 flex flex-row items-center justify-center gap-3 max-[800px]:hidden">
-                        <Link href="/" className={menuClass("/")}>{t("blog")}</Link>
+                        <Link href="/" className={menuClass("/")}>{t("home")}</Link>
+                        <Link href="/blog" className={menuClass("/blog")}>{t("blog")}</Link>
                         <Link href="/gallery" className={menuClass("/gallery")}>{t("gallery")}</Link>
                         <Link href="/note" className={menuClass("/note")}>{t("notes")}</Link>
                         <Link href="/musing" className={menuClass("/musing")}>{t("musing")}</Link>
