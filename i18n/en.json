@@ -19,6 +19,34 @@
         "attribution":"For all of us still finding our way",
         "navigation":"Explore Red Maple",
         "blog":"Blog",
-        "gallery":"Gallery"
+        "gallery":"Gallery",
+        "updates":{
+            "eyebrow":"RECENT UPDATES",
+            "title":"Moments lately",
+            "first":{
+                "category":"BLOG",
+                "date":"Nov 12, 2026",
+                "title":"In the spaces between time",
+                "description":"Some answers do not come from far away. They surface quietly when we stop and pay attention."
+            },
+            "second":{
+                "category":"GALLERY",
+                "date":"Nov 9, 2026",
+                "title":"Notes from an autumn walk",
+                "description":"Wandering a familiar street, watching light give an ordinary day a different shade."
+            },
+            "third":{
+                "category":"NOTE",
+                "date":"Nov 4, 2026",
+                "title":"The practice of slowing down",
+                "description":"Returning our attention to the life in front of us may be the beginning of finding ourselves again."
+            },
+            "fourth":{
+                "category":"MUSING",
+                "date":"Nov 1, 2026",
+                "title":"A small light in the night",
+                "description":"Even unformed thoughts can slowly find their direction in the quiet."
+            }
+        }
     }
 }

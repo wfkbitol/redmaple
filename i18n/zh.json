@@ -19,6 +19,34 @@
         "attribution": "写给仍在路上的我们",
         "navigation": "探索红枫树",
         "blog": "Blog",
-        "gallery": "Gallery"
+        "gallery": "Gallery",
+        "updates": {
+            "eyebrow": "近期更新",
+            "title": "最近的片刻",
+            "first": {
+                "category": "Blog",
+                "date": "2026年11月12日",
+                "title": "在时间的缝隙里",
+                "description": "有些答案并非来自远方，而是在停下脚步的那一刻，悄然浮现。"
+            },
+            "second": {
+                "category": "Gallery",
+                "date": "2026年11月9日",
+                "title": "秋日散步手记",
+                "description": "沿着熟悉的街道慢慢走，看光影如何为平凡的一天换上新颜色。"
+            },
+            "third": {
+                "category": "Note",
+                "date": "2026年11月4日",
+                "title": "关于慢下来的练习",
+                "description": "把注意力交还给眼前的生活，也许就是与自己重新相遇的开始。"
+            },
+            "fourth": {
+                "category": "Musing",
+                "date": "2026年11月1日",
+                "title": "夜色里的微光",
+                "description": "那些尚未成形的想法，也在安静中慢慢找到自己的方向。"
+            }
+        }
     }
 }

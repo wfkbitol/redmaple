@@ -53,7 +53,7 @@ function Header() {
 
     return (
         <>
-            <header ref={menuFloating.refs.setReference} {...menuInteraction.getReferenceProps()} className="h-16 bg-secondary border-b border-border flex flex-row items-center justify-center">
+            <header ref={menuFloating.refs.setReference} {...menuInteraction.getReferenceProps()} className="h-16 bg-secondary border-b border-border flex flex-row items-center justify-center sticky top-0">
                 <div className="grow max-w-6xl grid grid-cols-[auto_1fr_auto] items-center justify-items-center">
                     <div className="col-start-1 row-start-1 flex flex-row items-center gap-2 pl-8">
                         <svg viewBox="0 0 14 14" className="w-8 h-8 text-primary">
