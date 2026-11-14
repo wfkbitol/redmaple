@@ -20,6 +20,15 @@
         "navigation":"Explore Red Maple",
         "blog":"Blog",
         "gallery":"Gallery",
+        "footer":{
+            "brand":"RED MAPLE",
+            "description":"A quiet home for thoughts, notes, and moments worth keeping.",
+            "navigation":"Footer navigation",
+            "home":"Home",
+            "notes":"Notes",
+            "musing":"Musing",
+            "copyright":"© 2026 Red Maple. All moments gathered with care."
+        },
         "updates":{
             "eyebrow":"RECENT UPDATES",
             "title":"Moments lately",

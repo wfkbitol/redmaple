@@ -20,6 +20,15 @@
         "navigation": "探索红枫树",
         "blog": "Blog",
         "gallery": "Gallery",
+        "footer": {
+            "brand": "红枫树",
+            "description": "一个安放心绪、笔记与生活片刻的小小角落。",
+            "navigation": "页尾导航",
+            "home": "主页",
+            "notes": "笔记",
+            "musing": "随想",
+            "copyright": "© 2026 红枫树。认真收藏每一个片刻。"
+        },
         "updates": {
             "eyebrow": "近期更新",
             "title": "最近的片刻",

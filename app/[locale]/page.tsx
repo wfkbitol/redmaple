@@ -99,6 +99,36 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      <footer className="border-t border-border/70 bg-linear-to-b from-background via-secondary/30 to-secondary/65 px-6 py-20 sm:px-10 sm:py-24">
+        <div className="mx-auto w-full max-w-7xl">
+          <div className="grid gap-12 sm:grid-cols-[1.2fr_1fr] sm:items-start">
+            <div className="max-w-lg">
+              <div className="flex items-center gap-4 text-primary">
+                <svg aria-hidden="true" viewBox="0 0 14 14" className="h-11 w-11">
+                  <use href="/icons.svg#maple" fill="currentColor" />
+                </svg>
+                <span className="text-3xl font-semibold">{t("footer.brand")}</span>
+              </div>
+              <p className="mt-5 text-base leading-8 text-muted-foreground sm:text-lg">
+                {t("footer.description")}
+              </p>
+            </div>
+
+            <nav aria-label={t("footer.navigation")} className="flex flex-wrap gap-x-8 gap-y-5 pt-2 text-base font-medium sm:justify-self-end lg:flex-nowrap">
+              <Link href="/" className="text-secondary-foreground transition-colors hover:text-primary">{t("footer.home")}</Link>
+              <Link href="/blog" className="text-secondary-foreground transition-colors hover:text-primary">{t("blog")}</Link>
+              <Link href="/gallery" className="text-secondary-foreground transition-colors hover:text-primary">{t("gallery")}</Link>
+              <Link href="/note" className="text-secondary-foreground transition-colors hover:text-primary">{t("footer.notes")}</Link>
+              <Link href="/musing" className="text-secondary-foreground transition-colors hover:text-primary">{t("footer.musing")}</Link>
+            </nav>
+          </div>
+
+          <div className="mt-16 border-t border-border/80 pt-6 text-sm text-muted-foreground">
+            {t("footer.copyright")}
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
